@@ -1,8 +1,6 @@
 pipelines{
     agent any 
-    environment{
-
-    }
+   
 
     stages{
         stage('checkout'){
