@@ -1,4 +1,5 @@
 pipelines{
+    agent any 
     environment{
 
     }
