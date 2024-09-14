@@ -17,6 +17,11 @@ pipeline {
                 bat 'docker-compose build'
             }
         }
+        stage('Tag Image'){
+            steps{
+                bat 'docker tag health-app rutujamule/health-app:latest'
+            }
+        }
     }
 }
 
