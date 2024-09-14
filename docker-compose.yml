@@ -1,15 +1,12 @@
+
 version: '3.8'
-
 services:
-  backend:
-    build: .
-    image: health-app:latest
-   ports:
-      - "3001:3000"
-    environment:
-      - MONGO_URI=mongodb://mongo:27017/myDB?connectTimeoutMS=30000
-      - NODE_ENV=development
-
-            
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+       
 
   

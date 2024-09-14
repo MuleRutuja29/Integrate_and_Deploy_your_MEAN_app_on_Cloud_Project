@@ -4,9 +4,10 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                // Checkout code from the specified Git repository
-                git url: 'https://github.com/MuleRutuja29/Integrate_and_Deploy_your_MEAN_app_on_Cloud_Project.git', branch: 'master'
+                steps {
+                    // Checkout code from the specified Git repository
+                    git credentialsId: '460295e7-e391-49e0-9c90-30c0b1482d48', url: 'https://github.com/MuleRutuja29/Integrate_and_Deploy_your_MEAN_app_on_Cloud_Project.git', branch: 'master'
+                }
             }
         }
 
