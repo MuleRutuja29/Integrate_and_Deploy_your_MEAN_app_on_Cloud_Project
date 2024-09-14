@@ -22,6 +22,12 @@ pipeline {
                 bat 'docker tag health-app rutujamule/health-app:latest'
             }
         }
+        stage('Push Image'){
+            steps{
+                bat 'docker login -u rutujamule -p Pass@12345'
+                bat 'docker push rutujamule/health-app:latest'
+            }
+        }
     }
 }
 
