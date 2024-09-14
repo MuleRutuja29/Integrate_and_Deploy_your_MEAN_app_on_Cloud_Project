@@ -4,7 +4,7 @@ services:
   backend:
     build: .
     image: health-app:latest
-    ports:
+   ports:
       - "3000:3000"
     environment:
       - MONGO_URI=mongodb://mongo:27017/myDB?connectTimeoutMS=30000

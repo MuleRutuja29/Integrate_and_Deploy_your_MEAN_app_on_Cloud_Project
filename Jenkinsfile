@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Run Docker build command
-                bat 'docker-compose build --no-cache'
+                bat 'docker-compose build'
             }
         }
     }
