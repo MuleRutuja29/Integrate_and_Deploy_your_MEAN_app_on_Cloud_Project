@@ -6,7 +6,7 @@ pipelines{
     stages{
         stage('checkout'){
             steps{
-                git url: 'file:///E:/Integrate and Deploy your MEAN app on Cloud/Integrate and Deploy your MEAN app on Cloud-project/myExpress-app', branch: 'main',
+                git url: 'file:///E:/Integrate and Deploy your MEAN app on Cloud/Integrate and Deploy your MEAN app on Cloud-project/myExpress-app', branch: 'master',
                 
             }
         }
