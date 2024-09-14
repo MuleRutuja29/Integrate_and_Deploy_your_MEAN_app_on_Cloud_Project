@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from the specified Git repository
-                git url: 'file:///E:/Integrate and Deploy your MEAN app on Cloud/Integrate and Deploy your MEAN app on Cloud-project/myExpress-app', branch: 'master'
+                git url: 'https://github.com/MuleRutuja29/Integrate_and_Deploy_your_MEAN_app_on_Cloud_Project.git', branch: 'master'
             }
         }
 
