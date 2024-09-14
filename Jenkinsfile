@@ -1,0 +1,20 @@
+pipelines{
+    environment{
+
+    }
+
+    stages{
+        stage('checkout'){
+            steps{
+                git url: 'file:///E:/Integrate and Deploy your MEAN app on Cloud/Integrate and Deploy your MEAN app on Cloud-project/myExpress-app', branch: 'main',
+                
+            }
+        }
+
+        stage('Build'){
+            steps{
+                bat 'docker-compose build --no-cache'
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image:url('/images/entry-bg.jpg');background-repeat: no-repeat; background-size: cover"></body>
+    <h1>All Patient Reports</h1>
+   
+
+    <ul>
+        {{#each reports}}
+           <li>
+                <a class="font-class" href="/reports/{{this._id}}">Report {{this.reportText}}</a>
+           </li> 
+           {{!-- <li>
+            <a class="font-class" href="/reports/{{this.status}}">Report {{this.status}}</a>
+           </li>  --}}
+        {{/each}}
+    </ul>   
+
+
+    <a href="/reports">Back to Report Options</a>
+</body>
+</html>

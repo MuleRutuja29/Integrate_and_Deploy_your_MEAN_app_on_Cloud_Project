@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Patient Report</title>
+</head>
+<body style="background-image:url('/images/entry-bg.jpg');background-repeat: no-repeat; background-size: cover"></body>
+    <h1>View Patient Report</h1>
+    <p>Report ID: {{report._id}}</p>
+    <p>Report Status: {{report.status}}</p>
+    <p><strong>Patient Name:</strong> {{patient.name}}</p>
+    <p><strong>Patient Email:</strong> {{patient.email}}</p>
+    <!-- Additional details as needed -->
+    <p>Reort Text: {{report.reportText}}</p>
+    
+    <a href="/reports">Back to Report Options</a>
+</body>
+</html>

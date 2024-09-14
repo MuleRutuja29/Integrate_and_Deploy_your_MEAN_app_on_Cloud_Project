@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .font-class{
+            font-size: xx-large;
+            color: ghostwhite;
+        }
+    </style>
+</head>
+<body style="background-image:url('/images/doctor-bg.jpg');background-repeat: no-repeat; background-size: cover"></body>
+   <div class="container">
+        <h1 class="font-class">Name : - {{doctor.name}}</h1>
+         <p class="font-class">ID: {{doctor._id}}</p>
+        <p class="font-class">Email: {{doctor.email}}</p>
+        <p class="font-class">Specialty: {{doctor.specialty}}</p>
+        <a href="/doctors/all" class="btn btn-primary"    style="font-size: xx-large;
+    color: darkblue;">Back to Doctors List</a>
+    </div>   
+</body>
+</html>

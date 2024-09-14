@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Profile</title>
+    <style>
+         .font-class{
+            font-size: xx-large;
+            color: darkslategrey;
+        }
+    </style>
+</head>
+<body style="background-image:url('/images/patient-bg.jpg');background-repeat: no-repeat; background-size: cover"></body>
+
+    <h1>Patient Profile</h1>
+    <div>
+        <p class="font-class"><strong>Name:</strong> {{ patient.name }}</p>
+        <p class="font-class" ><strong>Email:</strong> {{ patient.email }}</p>
+        <!-- Add more details as needed -->
+    </div>
+
+    <!-- Link to view all reports for the patient -->
+    <h2>Patient Reports</h2>
+    <ul>
+        {{#each reports}}
+        <li>
+            <a class="font-class" href="/patients/reports/{{this._id}}">Report {{reportText }}</a>
+        </li>
+        {{/each}}
+    </ul>
+
+    <a href="/patients">Back to Patient Options</a>
+</body>
+</html>

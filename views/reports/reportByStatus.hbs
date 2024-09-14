@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports by Status</title>
+</head>
+<body>
+    <h1>View Reports by Status</h1>
+    <form action="/reports/view-status" method="GET">
+        <label for="status">Select Status:</label>
+        <select id="status" name="status">
+            <option value="pending">Pending</option>
+            <option value="approved">Approved</option>
+            <option value="rejected">Rejected</option>
+            <option value="completed">Completed</option>
+        </select>
+        <button type="submit">Fetch Reports</button>
+    </form>
+
+   {{#if reports.length}}
+        <h2>Reports with Status: {{status}}</h2>
+        <ul>
+            {{#each reports}}
+                <li>{{this.reportText}} - {{this.status}}</li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>No reports found for status: {{status}}</p>
+    {{/if}}
+</body>
+</html>
